@@ -1,0 +1,8 @@
+#board-pc {
+  position: relative;
+  width: 30vw;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: aliceblue
+}
