@@ -1,8 +1,8 @@
 #board-pc {
   position: relative;
-  width: 30vw;
+  width: 40vw;
   height: 100vh;
   left: 50%;
   transform: translateX(-50%);
-  background-color: aliceblue
+  background: linear-gradient(#7A756D,#97645f);
 }
