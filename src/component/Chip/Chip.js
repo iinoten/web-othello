@@ -4,7 +4,16 @@ import posed from 'react-pose';
 import './Chip.css';
 
 const rand_percent = () => {
-  return Math.floor(Math.random () * 50) + "% " + Math.floor(Math.random () * 50) + "% " + Math.floor(Math.random () * 50) + "% " + Math.floor(Math.random () * 50) + "%/" + Math.floor(Math.random () * 50) + "% " + Math.floor(Math.random () * 50) + "% " + Math.floor(Math.random () * 50) + "% " + Math.floor(Math.random () * 50) + "%";
+  return(
+    Math.floor((Math.random () * (80-20))+20) + "% " +
+    Math.floor((Math.random () * (80-20))+20) + "% " +
+    Math.floor((Math.random () * (80-20))+20) + "% " +
+    Math.floor((Math.random () * (80-20))+20) + "%/" +
+    Math.floor((Math.random () * (80-20))+20) + "% " +
+    Math.floor((Math.random () * (80-20))+20) + "% " +
+    Math.floor((Math.random () * (80-20))+20) + "% " +
+    Math.floor((Math.random () * (80-20))+20) + "%"
+  );
 }
 
 const Box = posed.div({
@@ -22,19 +31,27 @@ class Chip extends Component{
   }
 
   doubletap_handler = () => {
+    console.log("double clicked")
     this.setState({is_black: !this.state.is_black})
   }
   
   componentDidMount(){
     setInterval(()=>{
       this.setState({style_flag: !this.state.style_flag})
-    },500);
+    },200);
   }
 
   render(){
     return(
-        <Box className="box" pose={this.state.style_flag ? 'right' : 'left'} className={"chip " + (this.state.is_black?"black":"white")}>
-        </Box>
+      <Draggable>
+        <Box 
+          style={this.state.is_black?{backgroundColor:'#272B2E'} : {backgroundColor:'#F4F5F7'}} 
+          className="box" 
+          pose={this.state.style_flag ? 'right' : 'left'} 
+          className={"chip"} 
+          onDoubleClick={this.doubletap_handler}
+        />
+      </Draggable>
     );
   }
 }
