@@ -1,0 +1,18 @@
+table {
+  border-spacing: 2vh;
+}
+
+td {
+  height: 6vh;
+  width: 6vh;
+}
+
+tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd) {
+  background-color: rgba(17, 16, 16, 0.404);
+  box-shadow: 1px 0px 15px 2px rgba(17,16,15,0.5);
+}
+
+tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) {
+  background-color: rgba(238, 241, 244, 0.575);
+  box-shadow: 1px 0px 15px 2px rgba(238, 241, 244,1);
+}
