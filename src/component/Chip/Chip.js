@@ -26,7 +26,8 @@ class Chip extends Component{
     super();
     this.state = {
       is_black: true,
-      style_flag: true
+      style_flag: true,
+      is_dragging: false
     }
   }
 
@@ -41,11 +42,25 @@ class Chip extends Component{
     },200);
   }
 
+  drag_onstart_handler = () => {
+    this.setState({
+      is_dragging: true
+    })
+  }
+  drag_onstop_handler = () => {
+    this.setState({
+      is_dragging: false
+    })
+  }
+  
+  
   render(){
     return(
-      <Draggable>
+      <Draggable 
+        onStart={this.drag_onstart_handler}
+        onStop={this.drag_onstop_handler} >
         <Box 
-          style={this.state.is_black?{backgroundColor:'#272B2E'} : {backgroundColor:'#F4F5F7'}} 
+          style={this.state.is_black?{backgroundColor:'#272B2E', boxShadow: '0px 3px 4px rgba(244, 245, 247)', zIndex:(this.state.is_dragging?1:0)} : {backgroundColor:'#F4F5F7', boxShadow: '0px 3px 4px #272B2E', zIndex:(this.state.is_dragging?1:0)}} 
           className="box" 
           pose={this.state.style_flag ? 'right' : 'left'} 
           className={"chip"} 
