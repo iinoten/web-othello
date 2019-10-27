@@ -1,4 +1,14 @@
 .chip {
-  height: 50px;
-  width: 50px;
+  height: 6vh;
+  width: 6vh;
+  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+  position: absolute;
+}
+
+.black {
+  background-color: #272B2E;
+}
+
+.white {
+  background-color: #F4F5F7;
 }
