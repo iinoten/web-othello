@@ -1,7 +1,6 @@
 .chip {
   height: 6vh;
   width: 6vh;
-  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
   position: absolute;
 }
 
@@ -11,4 +10,7 @@
 
 .white {
   background-color: #F4F5F7;
+}
+span {
+  background-color: aqua;
 }
