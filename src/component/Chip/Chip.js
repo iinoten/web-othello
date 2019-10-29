@@ -5,14 +5,14 @@ import './Chip.css';
 
 const rand_percent = () => {
   return(
-    Math.floor((Math.random () * (80-20))+20) + "% " +
-    Math.floor((Math.random () * (80-20))+20) + "% " +
-    Math.floor((Math.random () * (80-20))+20) + "% " +
-    Math.floor((Math.random () * (80-20))+20) + "%/" +
-    Math.floor((Math.random () * (80-20))+20) + "% " +
-    Math.floor((Math.random () * (80-20))+20) + "% " +
-    Math.floor((Math.random () * (80-20))+20) + "% " +
-    Math.floor((Math.random () * (80-20))+20) + "%"
+    Math.floor((Math.random () * (80-30))+30) + "% " +
+    Math.floor((Math.random () * (80-30))+30) + "% " +
+    Math.floor((Math.random () * (80-30))+30) + "% " +
+    Math.floor((Math.random () * (80-30))+30) + "%/" +
+    Math.floor((Math.random () * (80-30))+30) + "% " +
+    Math.floor((Math.random () * (80-30))+30) + "% " +
+    Math.floor((Math.random () * (80-30))+30) + "% " +
+    Math.floor((Math.random () * (80-30))+30) + "%"
   );
 }
 
@@ -60,7 +60,7 @@ class Chip extends Component{
         onStart={this.drag_onstart_handler}
         onStop={this.drag_onstop_handler} >
         <Box 
-          style={this.state.is_black?{backgroundColor:'#272B2E', boxShadow: '0px 3px 4px rgba(244, 245, 247)', zIndex:(this.state.is_dragging?1:0)} : {backgroundColor:'#F4F5F7', boxShadow: '0px 3px 4px #272B2E', zIndex:(this.state.is_dragging?1:0)}} 
+          style={this.state.is_black?{backgroundColor:'#272B2E', boxShadow: '0px 3px 4px rgba(244, 245, 247)', zIndex:(this.state.is_dragging?10:9)} : {backgroundColor:'#F4F5F7', boxShadow: '0px 3px 4px #272B2E', zIndex:(this.state.is_dragging?10:9)}} 
           className="box" 
           pose={this.state.style_flag ? 'right' : 'left'} 
           className={"chip"} 
