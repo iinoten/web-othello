@@ -3,6 +3,17 @@
   width: 40vw;
   height: 100vh;
   left: 50%;
+  overflow: hidden;
   transform: translateX(-50%);
-  background: linear-gradient(#7A756D,#97645f);
+  background: linear-gradient(#7A756D, #97645f);
+}
+
+#board-mobile {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(#7A756D, #97645f);
 }

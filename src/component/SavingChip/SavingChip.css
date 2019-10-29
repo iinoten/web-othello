@@ -1,4 +1,4 @@
-.chip {
+.savingchip {
   height: 6vh;
   width: 6vh;
   position: absolute;
@@ -6,12 +6,10 @@
 
 .black {
   background-color: #272B2E;
-  box-shadow: 0px 29px 3px -3px rgba(244, 245, 247);
+  box-shadow: 0px 2px 6px rgba(244, 245, 247);
 }
 
 .white {
   background-color: #F4F5F7;
-}
-span {
-  background-color: aqua;
+  box-shadow: 0px 2px 6px #272B2E;
 }
